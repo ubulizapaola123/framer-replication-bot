@@ -1,0 +1,67 @@
+import { Button } from "./ui/button";
+import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
+
+const Hero = () => {
+  return (
+    <section id="home" className="relative min-h-screen hero-gradient overflow-hidden">
+      {/* Decorative elements */}
+      <div className="absolute top-0 left-0 w-64 h-64 bg-gradient-to-br from-muted/50 to-transparent rounded-full blur-3xl" />
+      <div className="absolute top-20 right-0 w-96 h-96 bg-gradient-to-bl from-muted/30 to-transparent rounded-full blur-3xl" />
+      
+      {/* Cloud/mountain decorative shapes */}
+      <div className="absolute top-32 left-0 w-32 h-48 bg-gradient-to-r from-muted-foreground/5 to-transparent" 
+           style={{ clipPath: 'polygon(0 100%, 100% 60%, 100% 100%)' }} />
+      <div className="absolute top-20 right-0 w-48 h-64 bg-gradient-to-l from-muted-foreground/10 to-transparent"
+           style={{ clipPath: 'polygon(0 40%, 100% 0, 100% 100%, 0 100%)' }} />
+      
+      <div className="container relative pt-32 pb-20">
+        <div className="max-w-3xl mx-auto text-center">
+          {/* Badge */}
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary text-primary-foreground text-sm mb-8">
+            <span className="w-1.5 h-1.5 bg-primary-foreground rounded-full animate-pulse" />
+            Revolutionize Africa Tech
+          </div>
+          
+          {/* Main heading */}
+          <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl font-medium text-foreground mb-6 leading-tight">
+            Building Africa's Tech Ecosystem From Rwanda
+          </h1>
+          
+          {/* Subtext */}
+          <p className="text-muted-foreground text-lg max-w-xl mx-auto mb-8">
+            Transform Africa's tech with NexaTech Rwanda's innovative solutions. We're creating the tech ecosystem that will make Rwanda the brain of Africa's technological revolution.
+          </p>
+          
+          {/* CTA Button */}
+          <Button size="lg" className="rounded-full px-8 mb-8">
+            Join Us
+          </Button>
+          
+          {/* Trusted by */}
+          <div className="flex flex-col items-center gap-3">
+            <div className="flex -space-x-2">
+              <Avatar className="w-10 h-10 border-2 border-background">
+                <AvatarImage src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face" />
+                <AvatarFallback>U1</AvatarFallback>
+              </Avatar>
+              <Avatar className="w-10 h-10 border-2 border-background">
+                <AvatarImage src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop&crop=face" />
+                <AvatarFallback>U2</AvatarFallback>
+              </Avatar>
+              <Avatar className="w-10 h-10 border-2 border-background">
+                <AvatarImage src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face" />
+                <AvatarFallback>U3</AvatarFallback>
+              </Avatar>
+            </div>
+            <span className="text-sm text-muted-foreground">Trusted by 30+ Clients</span>
+          </div>
+        </div>
+      </div>
+      
+      {/* Bottom border decoration */}
+      <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-border to-transparent" />
+    </section>
+  );
+};
+
+export default Hero;
